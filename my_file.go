@@ -40,7 +40,7 @@ func getAssetInfo(cld *cloudinary.Cloudinary, ctx context.Context) {
 	if err != nil {
 		fmt.Println("error")
 	}
-	fmt.Println("****3. Get and use details of the image****\nUpdate response:\n", resp, "\n")
+	fmt.Println("****3. Get and use details of the image****\nDetailed response:\n", resp, "\n")
 
 	// Assign tags to the uploaded image based on its width. Save the response to the update in the variable 'update_resp'.
 	if resp.Width > 900 {
