@@ -11,9 +11,11 @@ import (
 )
 
 func credentials() (*cloudinary.Cloudinary, context.Context) {
-	// 1. Add your Cloudinary credentials and create a context
+	// Add your Cloudinary credentials, set configuration parameter
+	// Secure=true to return "https" URLs, and create a context
 	//===================
 	cld, _ := cloudinary.New()
+	cld.Config.URL.Secure = true
 	ctx := context.Background()
 	return cld, ctx
 }
